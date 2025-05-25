@@ -1,0 +1,88 @@
+body{
+    width: 550px;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+}
+header{
+    height: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Movie\ Watchlist.png');
+    background-position: center 25%; /* or right, left, % values, px, etc. */
+    background-repeat: no-repeat;
+
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h1{
+    margin: 0;
+}
+
+#title{
+    font-size: 42px;
+    font-weight: 800;
+}
+#watchlist-btn{
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+#search-bar{
+    width: 460px;
+    height: 38px;
+    background-color:#fff;
+    border:solid 1px #D1D5DB;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search-icon{
+    margin: 0 10px;
+    color: #6B7280;
+}
+#search-input{
+    border: none;
+    font-size: 16px;
+    width: 270px;
+    color: #6B7280;
+    font-weight: 500;
+}
+#search-n-icon{ 
+    display: flex;
+}
+
+#search-btn{
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+    border: none;
+    background:none;
+    cursor: pointer;
+    color: #374151;
+    font-weight: 500;
+    
+}
+
+#btn-div{
+    background-color: #F9FAFB ;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid #D1D5DB;
+}
+

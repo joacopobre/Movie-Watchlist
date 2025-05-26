@@ -94,3 +94,4 @@ function renderFeed(){
     feed.innerHTML=feedHtml
 }
 
+placeholderHtml()

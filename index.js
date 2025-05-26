@@ -8,11 +8,19 @@ function fetchResults(){
     fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=766e706e&s=${searchTitle.value}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
-            moviesArr = data
+            moviesArr = data.Search
+            renderSearch()
          })
+        
+    
     
 }
+
+fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=766e706e&t=bladerunner`)
+    .then(res => res.json())
+    .then(data => 
+        console.log(data)
+    )
 
 
 
@@ -28,17 +36,20 @@ function placeholderHtml(){
     renderFeed()
 }
 
+
  function renderSearch(){
-    feedHtml=
+    console.log(moviesArr)
+    moviesArr.forEach(movie => {
+        feedHtml +=
     `
     <div id="movie">
         <div id="movie-img-div">
-            <img src="image.png" id="movie-img">
+            <img src=${movie.Poster} id="movie-img">
         </div>
         <div id="movie-details">
 
             <div id="movie-title-div">
-                <h1 id="movie-title">Blade Runner</h1>
+                <h1 id="movie-title">${movie.Title}</h1>
                 <i class="fa-solid fa-star" id="rating-icon"></i>
                 <p id="movie-rating">8.1</p>
             </div>
@@ -60,10 +71,18 @@ function placeholderHtml(){
     </div>
     <div class="div-separator"></div>
     `
+
+
+    })
+    
     renderFeed()
  }
 
-searchBtn.addEventListener("click",fetchResults)
+searchBtn.addEventListener("click",function(){
+    feedHtml =''
+    fetchResults()
+    
+})
 
 
 
